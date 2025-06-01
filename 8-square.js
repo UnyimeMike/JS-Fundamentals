@@ -1,14 +1,10 @@
- const arg = process.argv;
+const arg = process.argv[2];          
+const size = parseInt(arg);           
 
-// console.log(arg);
-
-const firstArg = process.argv[2];
-const convertArg =  parseInt(firstArg);
-
-if(isNaN(convertArg)){
-    console.log('Missing size');
-}
-
-for (let i = 0; i < convertArg; i++){
-    console.log('x'.repeat(convertArg));
+if (isNaN(size)) {
+  console.log("Missing size");
+} else {
+  for (let i = 0; i < size; i++) {
+    console.log('X'.repeat(size));    
+  }
 }
